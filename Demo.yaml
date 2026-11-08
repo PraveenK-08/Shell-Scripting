@@ -1,5 +1,5 @@
 -name : printing a hi message
- connection  : local
+ connection: local
  hosts: local
  tasks: 
   -name: printing hello
