@@ -1,5 +1,5 @@
 - name: printing numbers
-  hosts: local
+  hosts: localhost
   tasks: 
   - name: Display numbers
     debug:
