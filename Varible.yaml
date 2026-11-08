@@ -1,0 +1,10 @@
+- name: printing numbers
+  hosts: local
+  vars: 
+   a=0
+  tasks: 
+  - name: Display numbers
+    debug:
+     msg: "{{ item }}"
+    loop: "{{ range(1,10)| list }}" 
+    
