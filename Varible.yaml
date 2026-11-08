@@ -4,5 +4,5 @@
   - name: Display numbers
     debug:
      msg: "{{ item }}"
-    loop: "{{ range(1,10)| list }}" 
+    loop: "{{ range(1,10)| praveen }}" 
     
