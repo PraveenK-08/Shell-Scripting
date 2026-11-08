@@ -1,7 +1,7 @@
--name : printing a hi message
+- name : printing a hi message
   connection: localhost
   hosts: local
   tasks:
-   -name: printing hello
-    debug: 
+   - name: printing hello
+     debug: 
       msg: "hello team"
