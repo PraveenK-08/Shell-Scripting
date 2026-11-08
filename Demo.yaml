@@ -1,6 +1,6 @@
 - name : printing a hi message
-  connection: localhost
-  hosts: local
+  connection: local
+  hosts: localhost
   tasks:
    - name: printing hello
      debug: 
