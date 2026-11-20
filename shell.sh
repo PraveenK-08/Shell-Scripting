@@ -1,4 +1,4 @@
-#!bin/bash
+#!/bin/bash
 
-user_Id = $(id -u)
-echo $userId
+user_id=$(id -u)
+echo $user_id
