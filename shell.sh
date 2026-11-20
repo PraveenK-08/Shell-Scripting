@@ -14,9 +14,9 @@ for appname in $@
 do
 # dnf list installed $appname
 if dnf -q list installed "$appname" >/dev/null 2>&1; then
-  dnf install $appname -y
+   dnf install $appname -y
   echo " ${appname} installed successfully "
-  exit 1
+#   exit 1
 
 else
    echo " ${appname} is skipped "
