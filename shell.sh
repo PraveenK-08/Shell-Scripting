@@ -19,7 +19,7 @@ for appname in $@
 do
 dnf list installed ${appname} &>> $logs_file
 if [ $? -ne 0 ]; then
-   dnf list $appname
+   dnf list $appname &>> $logs_file
    if [ $? -eq 0 ]; then
      dnf install $appname -y
      echo " ${appname} installed successfully " | tee -a  $logs_file
