@@ -7,3 +7,5 @@ if [ ${user_id} -ne 0 ]; then
  exit 1
 fi
 
+dnf install nginx -y
+
