@@ -1,4 +1,4 @@
 #!bin/bash
 
-userId = ${id -u}
+userId = $(id -u)
 echo $userId
