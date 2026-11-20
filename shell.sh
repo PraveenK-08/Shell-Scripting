@@ -12,11 +12,11 @@ do
 dnf list installed $appname
 if [ $? -ne 0 ]; then
   dnf install $appname -y
-  echo " ${1} installed successfully "
+  echo " ${appname} installed successfully "
   exit 1
 
 else
-   echo " ${1} is skipped "
+   echo " ${appname} is skipped "
 fi
 done
 
