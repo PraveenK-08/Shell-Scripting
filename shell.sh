@@ -10,17 +10,23 @@ fi
 dnf install $1 -y
 echo ${?} 
 
-# for appname in $@
-# do
-# dnf list installed $appname
-# if [ $? -ne 0 ]; then
-#   dnf install $appname -y
-#   echo " ${appname} installed successfully "
+for appname in $@
+do
+dnf list --avaiable $appname
 
-# else
-#    echo " ${appname} is skipped "
-# fi
-# done
+if [ $? -eq 0 ]; then
+  dnf list installed $appname
+  if [$? -ne 0]
+   dnf install $appname -y
+   echo " ${appname} installed successfully "
+   else
+    echo "Application already installed...skipping  "
+
+else
+   echo "Application not found, please check ${appname} correctly "
+   
+fi
+done
 
 
 
