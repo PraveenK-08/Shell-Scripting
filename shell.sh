@@ -21,8 +21,8 @@ dnf list installed ${appname} &>> $logs_file
 if [ $? -ne 0 ]; then
    dnf list $appname &>> $logs_file
    if [ $? -eq 0 ]; then
-     dnf install $appname -y &>> $logs_file
      echo " installation started ${appname} "
+     dnf install $appname -y &>> $logs_file
      echo " ${appname} installed successfully " | tee -a  $logs_file
    else
      echo "Application not found, please check ${appname} correctly" | tee -a  $logs_file
