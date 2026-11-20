@@ -7,11 +7,11 @@ if [ ${user_id} -ne 0 ]; then
  exit 1
 fi
 
-for number in $#
+for appname in $@
 do
-dnf list installed $@
+dnf list installed $appname
 if [ $? -ne 0 ]; then
-  dnf install $@ -y
+  dnf install $appname -y
   echo " ${1} installed successfully "
   exit 1
 
