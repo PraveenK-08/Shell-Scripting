@@ -12,7 +12,7 @@ echo ${?}
 
 for appname in $@
 do
-dnf list --avaiable $appname
+dnf list --available $appname
 
 if [ $? -eq 0 ]; then
   dnf list installed $appname
