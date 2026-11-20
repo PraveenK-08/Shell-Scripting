@@ -7,21 +7,20 @@ if [ ${user_id} -ne 0 ]; then
  exit 1
 fi
 
-# dnf install $1 -y
-# echo ${?} 
+dnf install $1 -y
+echo ${?} 
 
-for appname in $@
-do
+# for appname in $@
+# do
 # dnf list installed $appname
-if dnf -q list installed "$appname" >/dev/null 2>&1; then
-   dnf install $appname -y
-  echo " ${appname} installed successfully "
-#   exit 1
+# if [ $? -ne 0 ]; then
+#   dnf install $appname -y
+#   echo " ${appname} installed successfully "
 
-else
-   echo " ${appname} is skipped "
-fi
-done
+# else
+#    echo " ${appname} is skipped "
+# fi
+# done
 
 
 
