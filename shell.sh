@@ -25,11 +25,11 @@ if [ $? -ne 0 ]; then
      dnf install $appname -y
      echo " ${appname} installed successfully " | tee -a  $logs_file
    else
-     echo "Application not found, please check ${appname} correctly | tee -a  $logs_file"
+     echo "Application not found, please check ${appname} correctly" | tee -a  $logs_file
    fi
 else
    
-   echo "Application already installed...skipping | tee -a  $logs_file "
+   echo "Application already installed...skipping " | tee -a  $logs_file 
    
 fi
 done
