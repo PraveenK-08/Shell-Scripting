@@ -18,7 +18,7 @@ fi
 
 for appname in $@
 do
-dnf list installed ${appname} & >> $logs_file
+dnf list installed ${appname} &>> $logs_file
 if [ $? -ne 0 ]; then
    dnf list $appname
    if [ $? -eq 0 ]; then
@@ -29,8 +29,7 @@ if [ $? -ne 0 ]; then
    fi
 else
    
-   echo "Application already installed...skipping " | tee -a  $logs_file 
-   
+   echo "Application already installed...skipping "
 fi
 done
 
