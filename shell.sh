@@ -7,7 +7,7 @@ if [ ${user_id} -ne 0 ]; then
  exit 1
 fi
 
-dnf list --available $1 -y
+dnf list module $1 -y
 echo ${?} 
 
 # for appname in $@
