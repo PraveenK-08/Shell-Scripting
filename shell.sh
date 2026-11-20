@@ -1,32 +1,34 @@
 #!/bin/bash
 
 user_id=$(id -u)
+logs_folder="/var/logs/$0"
+echo $logs_folder
 
-if [ ${user_id} -ne 0 ]; then
- echo "this program only run with root access only"
- exit 1
-fi
+# if [ ${user_id} -ne 0 ]; then
+#  echo "this program only run with root access only"
+#  exit 1
+# fi
 
-# dnf list $1 -y
-# echo ${?} 
+# # dnf list $1 -y
+# # echo ${?} 
 
-for appname in $@
-do
-dnf list installed $appname
-if [ $? -ne 0 ]; then
-   dnf list $appname
-   if [ $? -eq 0 ]; then
-     dnf install $appname -y
-     echo " ${appname} installed successfully "
-   else
-     echo "Application not found, please check ${appname} correctly "
-   fi
-else
+# for appname in $@
+# do
+# dnf list installed $appname 
+# if [ $? -ne 0 ]; then
+#    dnf list $appname
+#    if [ $? -eq 0 ]; then
+#      dnf install $appname -y
+#      echo " ${appname} installed successfully "
+#    else
+#      echo "Application not found, please check ${appname} correctly "
+#    fi
+# else
    
-   echo "Application already installed...skipping  "
+#    echo "Application already installed...skipping  "
    
-fi
-done
+# fi
+# done
 
 
 
