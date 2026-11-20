@@ -4,7 +4,7 @@ user_id=$(id -u)
 logs_folder="/var/logs/Shell-practice"
 logs_file="$logs_folder/$0"
 echo $logs_folder
-echo logs_file
+echo $logs_file
 # if [ ${user_id} -ne 0 ]; then
 #  echo "this program only run with root access only"
 #  exit 1
