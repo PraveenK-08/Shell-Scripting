@@ -2,8 +2,7 @@
 
 user_id=$(id -u)
 logs_folder="/var/logs/Shell-practice"
-logs_file="$logs_folder/$
-0"
+logs_file="$logs_folder/$0"
 # echo $logs_folder
 # echo $logs_file
 mkdir -p $logs_folder
@@ -28,7 +27,6 @@ if [ $? -ne 0 ]; then
      echo "Application not found, please check ${appname} correctly" | tee -a  $logs_file
    fi
 else
-   
    echo "Application already installed...skipping "
 fi
 done
