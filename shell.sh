@@ -21,7 +21,7 @@ if [ $? -eq 0 ]; then
    echo " ${appname} installed successfully "
    else
     echo "Application already installed...skipping  "
-
+   fi
 else
    echo "Application not found, please check ${appname} correctly "
    
