@@ -17,10 +17,10 @@ dnf list --avaiable $appname
 if [ $? -eq 0 ]; then
   dnf list installed $appname
   if [$? -ne 0]
-   dnf install $appname -y
-   echo " ${appname} installed successfully "
+     dnf install $appname -y
+     echo " ${appname} installed successfully "
    else
-    echo "Application already installed...skipping  "
+     echo "Application already installed...skipping  "
    fi
 else
    echo "Application not found, please check ${appname} correctly "
