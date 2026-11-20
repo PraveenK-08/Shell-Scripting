@@ -16,7 +16,7 @@ dnf list --avaiable $appname
 
 if [ $? -eq 0 ]; then
   dnf list installed $appname
-  if [$? -ne 0]
+   if [ $? -ne 0 ]; then
      dnf install $appname -y
      echo " ${appname} installed successfully "
    else
