@@ -1,3 +1,3 @@
 #!bin/bash
-$ userId= ${USER}
+$userId = ${USER}
 echo $userId
