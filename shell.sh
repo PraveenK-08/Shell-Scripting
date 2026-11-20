@@ -7,5 +7,5 @@ if [ ${user_id} -ne 0 ]; then
  exit 1
 fi
 
-dnf uninstall nginx -y
+dnf remove nginx -y
 
