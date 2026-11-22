@@ -4,7 +4,7 @@ GREEN='\e[1;32m'
 logs_folder="/var/log/Shell-practice"
 logs_file="$logs_folder/$0"
 
-mkdir -p $logs_folder
+mkdir -p $logs_file
 
 validate() {
     if [ $1 -eq 0 ]; then 
