@@ -16,6 +16,6 @@ validate() {
     fi 
 }
 
-dnf install ${appname} -y &>> $logs_file
+dnf install $1 -y &>> $logs_file
 
-validate $? " ${appname} installation "
+validate $? " ${1} installation "
