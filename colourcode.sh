@@ -6,13 +6,14 @@ logs_file="$logs_folder/$0"
 
 validate() {
     if [ $1 -eq 0 ]; then 
-        echo -e " ${2} is success$GREEN "
+        echo -e " ${2} is ${GREEN}success"
     
     else
-        echo -e " ${2} is Failed$RED "
+        echo -e " ${2} is ${RED}Failed "
     
     fi 
 }
 
 dnf install ${appname} -y &>> -a $logs_file
-validate
+
+validate $? " ${appname} installation "
