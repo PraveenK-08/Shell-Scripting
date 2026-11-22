@@ -15,4 +15,4 @@ validate() {
 }
 
 dnf install ${appname} -y &>> -a $logs_file
-validate()
+validate
